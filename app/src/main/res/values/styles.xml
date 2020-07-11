@@ -1,10 +1,23 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorAccent">@color/darkGrey</item>
+        <item name="colorControlNormal">@color/darkGrey</item>
+        <item name="android:textColorHint">@color/darkGrey</item>
+
+        <item name="colorControlActivated">@color/yellow</item>
     </style>
 
+    <style name="HintText" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/darkGrey</item>
+    </style>
+
+    <style name="ErrorText" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/errorColor</item>
+        <item name="colorControlActivated">@color/errorColor</item>
+    </style>
 </resources>

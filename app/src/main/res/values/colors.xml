@@ -3,4 +3,14 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="darkGrey">#535A72</color>
+    <color name="yellow">#E9CF30</color>
+    <color name="green">#3BA935</color>
+    <color name="shadowColorGreen">#72C875</color>
+    <color name="lightColor">#FBFCFF</color>
+    <color name="shadowColor">#BBBBBB</color>
+    <color name="darkBlue">#172C49</color>
+    <color name="errorColor">#FC3131</color>
+    <color name="borderColor">#E1E1E1</color>
 </resources>
