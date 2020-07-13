@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".activities.MainActivity"
     android:orientation="vertical"
     android:paddingLeft="30dp"
     android:paddingRight="30dp"
@@ -38,8 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:hintTextAppearance="@style/HintText"
-            app:errorTextAppearance="@style/ErrorText"
-            app:errorEnabled="true">
+            app:errorTextAppearance="@style/ErrorText">
             <EditText android:id="@+id/input_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,13 +56,11 @@
             app:errorTextAppearance="@style/ErrorText"
             app:passwordToggleEnabled="true"
             app:errorEnabled="true">
-
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
                 android:inputType="textPassword"/>
-
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
