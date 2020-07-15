@@ -10,7 +10,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -27,6 +26,7 @@ import android.widget.Toast;
 import com.example.mapapplication.MessageDisplay;
 import com.example.mapapplication.PermissionRequest;
 import com.example.mapapplication.R;
+import com.example.mapapplication.data.Container;
 import com.example.mapapplication.data.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -38,16 +38,9 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import static com.example.mapapplication.R.color.errorColor;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private DatabaseReference myRef;
-    private FirebaseDatabase myDatabase;
+//    private FirebaseDatabase myDatabase;
+
+    private List<Container> containers = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         myRef = FirebaseDatabase.getInstance().getReference("users");
-        myDatabase = myRef.getDatabase();
+//        myDatabase = myRef.getDatabase();
 
         loginButton = findViewById(R.id.login_button);
 
@@ -166,8 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
         PermissionRequest.checkNetworkConnected(this);
 
-
-//        CheckAddNewUser("taha.m101@gmail.com", "taha2","123456");
+        CheckAddNewUser("taha.almokahel@gmail.com", "taha","123456");
     }
 
     private void CheckAddNewUser(final String email, final String username, final String password) {
@@ -201,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
 
                         FirebaseUser user = mAuth.getCurrentUser();
 
-                        User _user = new User(email, username, password);
+                        User _user = new User(email, username, password, false);
                         myRef.child(user.getUid()).setValue(_user);
                     } else {
                         // If sign in fails, display a message to the user.

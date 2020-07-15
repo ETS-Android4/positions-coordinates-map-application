@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.25"
-        android:text="Please enter your user name and password. (T2)"
+        android:text="Please enter your user name and password."
         android:textSize="20dp"
         android:textColor="@color/darkBlue" />
 
