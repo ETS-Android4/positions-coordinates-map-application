@@ -1,6 +1,6 @@
 # Positions Coordinates Map Application
 
-Training Application.
+Application for training.
 
 You can download and test apk, you will find it in a rar file on repository project. [Apk](https://github.com/TahaGitHub/Map-Application/blob/master/Map_Application.zip)
 
